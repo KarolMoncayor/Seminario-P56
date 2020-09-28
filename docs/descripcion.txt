@@ -3,5 +3,5 @@ UNIVERSIDAD POLITECNICA SALESIANA
 Carrera de Ingeneria de Sistemas 
 Seminario Profesional - Node.js + MongoDB
 
-Clases -Diapositivas sobre las clases de este seminario  
-Talleres - Descripcion de los talleres del seminario
+Clases-Diapositivas sobre las clases de este seminario  
+Talleres-Descripcion de los talleres del seminario
