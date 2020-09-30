@@ -1,4 +1,5 @@
 var docentes1 = {
+    
     nombre : 'Karol',
     apellido: 'Moncayo',
     afiliacion: 'Universidad Politecnica Salesiana',
