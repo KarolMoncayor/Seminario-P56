@@ -17,7 +17,7 @@ function getCarreras (filtroCarrera) {
         resolve( storage.get(filtroCarrera))
 
     })
-}
+} 
 
 function updateCarrera(idCarrera,nombre,abreviatura, descripcion){
     return new Promise(async (resolve,reject)=>{

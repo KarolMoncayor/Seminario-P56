@@ -1,23 +1,21 @@
-const model = require ('./model')
+const model = require('./model')
 
-function addDocente(objeto){
-    const docente = new model (objeto)
+function addDocente( objeto ) {
+    const docente = new model( objeto )
     docente.save()
-    
-} 
+}
 
-async function getDocentes( filtroDocente ){
+async function getDocentes( filtroDocente ) {
     let filtro = {}
-    if (filtroDocente!= null){
-        filtro = {nombre: filtroDocente}
-
+    if (filtroDocente != null) {
+        filtro = { nombre : filtroDocente }
     }
-    const docenteList= await model.find(filtro)
+    const docenteList = await model.find( filtro )
     return docenteList
 }
 
-async function updateDocente(idDocente,objeto){
-    const foundDocente = await model.findOne({_id:idDocente})
+async function updateDocente( idDocente, objeto ) {
+    const foundDocente = await model.findOne({ _id: idDocente })
 
     foundDocente.nombre = objeto.nombre
     foundDocente.apellido = objeto.apellido
@@ -26,14 +24,14 @@ async function updateDocente(idDocente,objeto){
     const result = await foundDocente.save()
     return result
 }
-    
-function deleteDocente(idDocente){
-      return model.deleteOne({_id : idDocente})
-}
-    module.exports = {
-    add : addDocente,
-    get : getDocentes,
-    update : updateDocente,
-    delete : deleteDocente,
+
+function deleteDocente(idDocente) {
+    return model.deleteOne({ _id: idDocente })
 }
 
+module.exports = {
+    add: addDocente,
+    get: getDocentes,
+    update: updateDocente,
+    delete: deleteDocente,
+}
